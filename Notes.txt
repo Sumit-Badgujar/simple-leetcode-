@@ -1,0 +1,27 @@
+
+Steps to Implement the Signup Endpoint
+1. Decode the Request Body:
+    • Extract the and from the request body.
+    • Ensure the server can parse JSON bodies using middleware.
+2. Validate Input:
+    • Check if the and password* are provided and are in the correct format.
+3. Check for Existing User:
+    • Verify if a user with the given already exists in the 'USERS* array.
+4. Store User Data:
+    • If the user does not exist, add the new user to the array.
+5. Send Response:
+    • Return a success message with a 200 status code if the user is registered.
+    • Return an error message with a 400 status code if the user already exists.
+
+
+1)   const {email, password} = req.body ; - i think that is spread operator in LHS side i guess so ! if it is i get it! but is req.body is extracting it for us ? what other things req. body can give us ? what req. even contains ? can i see how it looks  ? and we can only use req.body cause we have added app.use(express.json()) this middleware in our code ? am i right ? 
+
+2) what is this emailRegex ? in   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; and  if (!emailRegex.test(email)) {
+    return res.status(400).send('Invalid email format');
+  } i dont undersatnd this as well ! what does that .test() fun do ?? will you elaborate ? 
+
+3)   const userExist = USERS.some(user=> user.email === email) ;  what this some function do ? i guess its only for arrays i want to leanr it and its all the necessary things which are extremly imp. only ! i belive it returns something boolian or 0 or 1 ! right ? one more subquestion in this 3rd question is why we have use === for  const userExist = USERS.some(user=> user.email === email) ;  this !
+
+4)   USERS.push({email, password}) ; is it enough ? that how it is done ? i am not sure about this questionwhat i want to ask , but i belive u can sort me out on this que. as well ! 
+
+
