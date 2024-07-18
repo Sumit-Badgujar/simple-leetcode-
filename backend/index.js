@@ -9,10 +9,7 @@ const USERS = [
     { email: 'test3@example.com', password: 'anotherpassword' },
     { email: 'test4@example.com', password: 'strongpassword' },
     { email: 'test5@example.com', password: 'verystrongpassword' },
-    // Optionally add more users up to 8
-    // { email: 'test6@example.com', password: 'unique_password' },
-    // { email: 'test7@example.com', password: 'complex_password' },
-    // { email: 'test8@example.com', password: 'super_secure_password' }
+   
   ];
   
   const QUESTIONS = [
@@ -229,6 +226,7 @@ app.get("/questions/:questionId/submissions", function(req, res) {
         res.status(404).send('No submissions found for this question'); // Handle no submissions case
     }
 });
+
 
 // leaving as hard todos
 // Create a route that lets an admin add a new problem
